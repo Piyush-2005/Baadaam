@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.menu-container {
+    background-image: url(https://img.freepik.com/premium-photo/colorful-various-herbs-spices-cooking-dark-background_370312-476.jpg);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    perspective: 1000px; /* Enable 3D perspective */
+}
+
+.menu {
+    width: 500px;
+    height: 600px;
+    position: relative;
+    transform-style: preserve-3d; /* Maintain 3D effect on children */
+    transition: transform 0.5s;
+}
+
+.menu-page {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.189);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    backface-visibility:visible; 
+    /* backface-visibility:; */
+    transition: transform 0.5s;
+}
+
+.menu-page:nth-child(1n) {
+    transform: rotateY(180deg); /* Initial flip to show back side */
+}
+.mirror{
+    transform: scaleX(-1);
+}
+
+.menu-page h1 {
+    text-align: center;
+    color: #f1f0f0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #f1f0f0;
+}
+
+.menu.active {
+    transform: rotateY(180deg); /* Flip the menu */
+}
+
+.menu-page .hidden {
+    display: none;
+}

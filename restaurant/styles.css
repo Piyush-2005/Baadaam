@@ -1,0 +1,274 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    scroll-behavior: smooth;
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* display: none;  */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0rem;
+    color: #000;
+}
+
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 6rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+    display: flex;
+    vertical-align: middle;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url(doodled\ background.png);
+    background-color: linear-gradient(to bottom right, red, yellow);  /* Change the background image here */
+    background-size:100%;
+    /* background-image-height: 100%; */
+    background-position: absolute;
+    background-repeat: no-repeat;
+    /* background-position-x: center; */
+    color: #000000;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1{
+    margin: 10px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+main {
+    padding-top: 70px; /* Height of the header */
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.menu, .contact {
+    text-align: center;
+}
+
+.menu h2, .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.menu .menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2.5rem;
+    
+}
+
+.menu-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: inline;
+    
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    transform: scale(1.15);
+
+}
+
+.menu-card img {
+    width: 100%;
+    height: 60%;
+    display: block;
+}
+
+.menu-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.menu-card p {
+    margin: 0 1rem 1rem;
+    font-size: 1rem;
+}
+
+.contact p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+.chicken p{
+    margin: 1rem
+}
+
+footer p {
+    margin: 0;
+}
+/* .dropdown{
+    visibility: hidden;
+} */
+
+@media (max-width: 1200px) {
+    .hero{
+        margin-bottom: -20vh;
+    }
+    .kulche p {
+        margin: 0 0rem 0rem;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 1000px) {
+    .hero{
+        margin-bottom: -30vh;
+    }
+    .menu-card p {
+        margin: 0 0rem 0rem;
+        font-size: 0.8rem;
+    }
+    .kulche p {
+        margin: 0 0rem 0rem;
+        font-size: 0.7rem;
+    }
+    /* .dropdown{
+        visibility: visible;
+    } */
+    nav ul li {
+        margin-left: 4rem;
+    }
+}
+@media (max-width: 900px) {
+    .hero{
+        margin-bottom: -40vh;
+    }
+    .kulche p {
+        margin: 0 0rem 0rem;
+        font-size: 0.6rem;
+    }
+    nav ul li {
+        margin-left: 1rem;
+    }
+
+}
+@media (max-width: 800px) {
+    .hero{
+        margin-bottom: -50vh;
+    }
+    nav-item {
+        /* flex-direction: column;
+        margin-top: 1rem; */
+        visibility: hidden;
+    }
+
+}
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    nav ul .dropdown{
+        position: absolute;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-card {
+        width: calc(50% - 2rem);
+    }
+    .menu-card p{
+        display: none;
+    }
+    .hero{
+        display: none;
+
+    }
+    
+    /* .popup{
+        display: flex;
+        flex-direction: row;
+    } */
+
+    header h1{
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-card {
+        width: calc(100% - 2rem);
+        /* height: fit-content; */
+    }
+}
